@@ -61,3 +61,43 @@ elif m < 5:
     print('O aluno está REPROVADO')
 elif m >= 7:
     print('O aluno está APROVADO.')
+
+# atividade 43
+from datetime import date
+
+an = int(input('Ano de Nascimento: '))
+ana = date.today().year
+n = (ana - an)
+
+print('O atleta tem {} anos.'.format(n))
+
+if n > 25:
+    print('Clasificação: MASTER')
+elif n > 19 and n <= 25:
+    print('Clasificação: SÊNIOR')
+elif n > 14 and n <= 19:
+    print('Clasificação: JÚNIOR')
+elif n > 9 and n <= 14:
+    print('Clasificação: INFANTIL')
+elif n > 0 and n <= 9:
+    print('Clasificação: MIRIM')
+
+# atividade 44
+s1 = int(input('Primeiro segmento: '))
+s2 = int(input('Segundo segmento: '))
+s3 = int(input('Terceiro segmento: '))
+
+if s1 < s2 + s3 and s2 < s1 + s3 and s3 < s1 + s2:
+    print('Os segmentos acima PODEM FORMAR um triângulo ', end='')
+
+    if s1 == s2 == s3:
+        print('EQUILÁTERO!')
+    elif s1 != s2 and s2 != s3 and s3 != s1:
+        print('ESCALENO!')
+    else:
+        print('ISÓCELES')
+
+else:
+    print('Os segmentos acima NÃO PODEM FORMAR um triângulo')
+
+# atividade 45
