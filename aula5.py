@@ -123,6 +123,79 @@ elif imc >= 18.5 and imc < 25:
 elif imc < 18.5:
     print('Você está ABAIXO DO PESO IDEAL, cuidado!')
 
+# atividade 45
+peso = float(input('Qual é o seu peso? (kg) '))
+altura = float(input('Qual é a sua altura? (m) '))
+
+imc = (peso / (altura ** 2))
+print('O IMC dessa pessoa é de {:.1f}'.format(imc))
+
+
+if imc > 40:
+    print('Você está em OBESIDADE MÓRBIDA, cuidado!')
+
+elif imc >= 30 and imc < 40:
+    print('Você está em OBESIDADE!')
+
+elif imc >= 25 and imc < 30:
+    print('Você está em SOBREPESO!')
+
+elif imc >= 18.5 and imc < 25:
+    print('Você está na faixa de PESO IDEAL!')
+
+elif imc < 18.5:
+    print('Você está ABAIXO DO PESO IDEAL, cuidado!')
+
 # atividade 46
+print('=' * 25, 'LOJAS DO SEU ZÉ', '=' * 25)
+pre = float(input('Preço das compras: R$'))
+
+print('_' * 40)
+print('FORMAS DE PAGAMENTO')
+
+print('[ 1 ] à vista dinheiro/cheque')
+print('[ 2 ] à vista cartão')
+print('[ 3 ] 2x no cartão')
+print('[ 4 ] 3x ou mais no cartão')
+print('[ 5 ] fish ball cat')
+
+
+print('_' * 40)
+opc = input('Qual é a opção? ')
+
+print('_' * 40)
+if opc == '1':
+    pre2 = (pre - (pre * 10  / 100))
+    print('Sua compra de R${:.2f} vai custar {:.2f} no final'.format(pre,pre2))
+
+elif opc == '2':
+    pre2 = (pre - (pre * 5  / 100))
+    print('Sua compra de R${:.2f} vai custar {:.2f} no final'.format(pre,pre2))
+
+elif opc == '3':
+    pre2 = pre 
+    parcela = pre2 / 2
+
+    print('Sua compra será parcelada em 2X de R${:.2f} SEM JUROS'.format(parcela))
+    print('Sua compra de R${:.2f} vai custar {:.2f} no final'.format(pre,pre2))
+
+elif opc == '4':
+    pre2 = pre + (pre * 20 / 100)
+    tparcela = int(input('Quantas parcelas? '))
+    parcela = pre2 / tparcela
+
+    print('Sua compra será parcelada em {}X de R${:.2f} COM JUROS'.format(tparcela,parcela))
+    print('Sua compra de R${:.2f} vai custar {:.2f} no final'.format(pre,pre2))
+
+elif opc == '5':
+    print('ain~')
+
+else:
+    pre2 = 0
+    print('OPÇÃO INVÁLIDA de pagamento. Tente novamente!')
+    print('Sua compra de R${:.2f} vai custar {:.2f} no final'.format(pre,pre2))
+
+# atividade 47
+
 
 
